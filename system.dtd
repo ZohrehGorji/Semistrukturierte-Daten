@@ -1,0 +1,38 @@
+<!ELEMENT system (items,stores,area,area)>
+
+<!ELEMENT items     (item*)>
+<!ELEMENT item          (#PCDATA)>
+<!ATTLIST item id CDATA #REQUIRED>
+
+<!ELEMENT stores   (store*)>
+<!ELEMENT store (name, type,capacity)>
+<!ELEMENT name          (#PCDATA)>
+<!ELEMENT type          (#PCDATA)>
+<!ELEMENT capacity      (#PCDATA)>
+<!ATTLIST store id CDATA #REQUIRED>
+
+<!ELEMENT area   (slot*)>
+<!ATTLIST area name CDATA #REQUIRED>
+<!ELEMENT slot (input , conveyor , generator , machine , turntable , output)>
+<!ATTLIST slot id CDATA #REQUIRED>
+<!ATTLIST slot name CDATA #REQUIRED>
+<!ATTLIST slot  parallel CDATA #REQUIRED>
+
+<!ELEMENT input   (item*)>
+<!ELEMENT conveyor   (cost, time)>
+<!ATTLIST conveyor name CDATA #REQUIRED>
+
+<!ELEMENT cost   (#PCDATA)>
+<!ELEMENT time   (#PCDATA)>
+
+<!ELEMENT generator   (cost, time)>
+<!ATTLIST generator name CDATA #REQUIRED>
+
+<!ELEMENT machine   (cost, time)>
+<!ATTLIST machine name CDATA #REQUIRED>
+
+
+<!ELEMENT turntable   (cost, time)>
+<!ATTLIST turntable name CDATA #REQUIRED>
+
+<!ELEMENT output   (item*)>

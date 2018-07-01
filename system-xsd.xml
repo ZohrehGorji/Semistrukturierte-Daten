@@ -1,0 +1,93 @@
+<system>
+	<items>
+		<item id="1">Item #1</item>
+		<item id="2">Item #2</item>
+		<item id="3">Item #3</item>
+		<item id="4">Item #4</item>
+		<item id="5">Item #5</item>
+	</items>
+	<stores>
+		<store id="6">
+			<name>Store 1</name>
+			<type>normal</type>
+			<capacity>100</capacity>
+		</store>
+		<store id="7">
+			<name>Store 2</name>
+			<type>waste</type>
+			<capacity>200</capacity>
+		</store>
+		<store id="8">
+			<name>Store 3</name>
+			<type>sent</type>
+			<capacity>300</capacity>
+		</store>
+	</stores>
+	<area name="area1">
+		<slot id="12" name="Store 3" parallel="False" >
+			<input>
+				<item id="20"> 445 
+				</item>
+			</input>
+
+			<conveyor name="conveyor1">
+				<cost> 120</cost>
+				<time> 12:00:00</time>
+			</conveyor>
+
+			<generator name="generator1">
+				<cost> 140</cost>
+				<time> 14:00:00</time>
+			</generator>
+
+			<machine name="machine1">
+				<cost> 1340</cost>
+				<time> 16:00:00</time>
+			</machine>
+
+			<turntable name="turntable1">
+				<cost> 120</cost>
+				<time> 12:00:00</time>
+			</turntable>
+
+			<output>
+				<item id="21"> 445 
+				</item>
+			</output>
+			
+		</slot>
+
+	</area>
+
+	<area name="area2">
+		<slot id="13" name="Store 4" parallel="True" >
+			<input>
+				<item id="22"> 445 
+				</item>
+			</input>
+			<conveyor name="conveyor2">
+				<cost> 220</cost>
+				<time> 18:00:00</time>
+			</conveyor>
+
+			<generator name="generator2">
+				<cost> 240</cost>
+				<time> 19:00:00</time>
+			</generator>
+
+			<machine name="machine2">
+				<cost> 2340</cost>
+				<time> 20:00:00</time>
+			</machine>
+
+			<turntable name="turntable2">
+				<cost> 220</cost>
+				<time> 22:00:00</time>
+			</turntable>
+			<output>
+				<item id="23"> 445 
+				</item>
+			</output>
+		</slot>
+	</area>
+</system>
